@@ -22,7 +22,7 @@ export default async function HomePage() {
       {movies.map((movie) => (
         <Movie
           key={movie.id}
-          id={movie.id}
+          id={movie.id.toString()}
           poster_path={movie.poster_path}
           title={movie.title}
         />

@@ -3,7 +3,8 @@ import styles from "../styles/movie_perview.module.css";
 
 async function getSimilarMovie(id: string) {
   const response = await fetch(`${API_URL}/${id}/similar`);
-  return response.json();
+  const json = await response.json();
+  return json;
 }
 
 export default async function Preview({ id }: { id: string }) {

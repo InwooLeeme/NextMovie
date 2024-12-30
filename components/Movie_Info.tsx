@@ -1,9 +1,10 @@
 import { API_URL } from "../app/(Home)/page";
 import styles from "../styles/movie_info.module.css";
 
-async function getMovieInfo(id: string) {
+export async function getMovieInfo(id: string) {
   const response = await fetch(`${API_URL}/${id}`);
-  return response.json();
+  const json = await response.json();
+  return json;
 }
 
 export default async function MovieInfo({ id }: { id: string }) {
